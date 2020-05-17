@@ -1,15 +1,12 @@
 <template>
-  <div>
-    <nuxt-child/>
-  </div>
+  <h1>Forum</h1>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
+  components: {
+  }
 })
 </script>
-
-<style>
-</style>

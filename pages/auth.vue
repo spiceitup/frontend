@@ -1,15 +1,12 @@
 <template>
-  <div>
-    <nuxt-child/>
-  </div>
+<div>
+  <nuxt-child/>
+</div>
 </template>
-
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.extend({
+  layout: 'none'
 })
 </script>
-
-<style>
-</style>
+<style lang="scss"></style>

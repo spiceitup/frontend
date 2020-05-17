@@ -43,6 +43,7 @@ module.exports = {
     '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/vuetify',
     '@nuxtjs/pwa'
   ],
   /*
