@@ -1,16 +1,21 @@
-// import Vue from 'vue'
-// import Vuetify from 'vuetify'
-// import 'vuetify/dist/vuetify.min.css'
-// import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader version "^2.1.1" ,
-// Vue.use(Vuetify)
+import Vue from 'vue'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader version "^2.1.1"
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
-// export default (ctx : any) => {
-//   const vuetify = new Vuetify({
-//     theme: {
-//       dark: false // From 2.0 You have to select the theme dark or light here
-//     }
-//   })
+Vue.use(Vuetify)
 
-//   ctx.app.vuetify = vuetify
-//   ctx.$vuetify = vuetify.framework
-// }
+export default (ctx : any) => {
+  const vuetify = new Vuetify({
+    icons: {
+      iconfont: 'md',
+    },
+    theme: {
+      dark: false // From 2.0 You have to select the theme dark or light here
+    }
+  })
+
+  ctx.app.vuetify = vuetify
+  ctx.$vuetify = vuetify.framework
+}

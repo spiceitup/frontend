@@ -19,8 +19,8 @@
           <input 
             type="text" 
             class="input" 
-            v-model = "user"
-            placeholder="Username" 
+            v-model = "search"
+            placeholder="Search" 
             required/>
         </div>
       </div>
@@ -37,5 +37,11 @@
 </template>
 <script lang="ts">
   import Vue from 'vue'
-  export default Vue.extend({})
+  export default Vue.extend({
+    data(){
+      return {
+        search: ""
+      }
+    }
+  })
 </script>
