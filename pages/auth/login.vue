@@ -5,10 +5,14 @@
       <h2 class="subtitle">ALPHA</h2>
     </div>
     <form id="login" class="loginForm" @submit.prevent="authValidate">
-      <h1 class="form-title">Login</h1>
+      <div class="brand-content">
+        <div><img src="~static/spice_logo.png" alt="Spice" class="brand"></div>
+      </div>
+      
       <v-text-field
         placeholder="Username"
         v-model = "user"
+        height="20px"
         filled
         rounded
       ></v-text-field>
@@ -16,6 +20,7 @@
       <v-text-field
         placeholder="Password"
         v-model = "pass"
+        height="20px"
         filled
         rounded
       ></v-text-field>
@@ -48,6 +53,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '~/assets/scss/index';
 
+$brand-scale: 35px;
 .login {
   display: grid;
   overflow: hidden;
@@ -69,15 +75,26 @@ export default Vue.extend({
   }
   .loginForm{
     padding: 100px 30px;
-    .brand {
+    font-size: 18px;
+    // .brand {
+    //   display: flex;
+    //   padding-bottom: 30px;
+    //   span {
+    //     font-size: 30px;
+    //     font-family: $font-family;
+    //     padding: 20px 0;
+    //   }
+    // }
+    .brand-content {
       display: flex;
-      padding-bottom: 30px;
-      span {
-        font-size: 30px;
-        font-family: $font-family;
-        padding: 20px 0;
+      justify-content: flex-end;
+      .brand{
+        height: $brand-scale;
+        width: auto;
       }
+      margin-bottom: 10px;
     }
+
     .form-title{
       font-family: $font-family;
       font-size: 30px;
